@@ -1,15 +1,15 @@
 #pragma once
 
 #include "ll/api/mod/NativeMod.h"
+xmake project -k compile_commands
+namespace better_suicide {
 
-namespace my_mod {
-
-class MyMod {
+class BetterSuicide {
 
 public:
-    static MyMod& getInstance();
+    static BetterSuicide& getInstance();
 
-    MyMod() : mSelf(*ll::mod::NativeMod::current()) {}
+    BetterSuicide() : mSelf(*ll::mod::NativeMod::current()) {}
 
     [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 
@@ -30,4 +30,4 @@ private:
     ll::mod::NativeMod& mSelf;
 };
 
-} // namespace my_mod
+} // namespace better_suicide
